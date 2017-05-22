@@ -1,0 +1,34 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+
+<br>
+    <h1 class="text-center">{{ title }} &nbsp&nbsp<small>目前共计{{ archive_article_num }}篇日志</small></h1>
+    <br>
+<!-- 归档 -->
+<!--
+regroup 对 dates 按照 year(年份) 分组，把相同年份的月分到一个组
+-->
+{% regroup dates by year as dates_by_year %}
+<ul>
+
+    {% for mouth in dates_by_year %}
+    <!-- month 是一组月份列表 -->
+        <li style="font-size: x-large">
+                {{ mouth.grouper }} 年
+            <!-- grouper 是组头，即某个月份列表的年份 -->
+            <ul>
+                {% for d in mouth.list %}
+                <!-- 再循环显示该年份组下的月份列表即可 -->
+                    <li style="font-size: large">
+                        {{ d |date:'m' }} 月
+                        {{ d |date:'d' }} 日
+                        <a href="/content/{{ articles_id.next.id }}">《{{ articles.next.title }}》</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

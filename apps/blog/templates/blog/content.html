@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+    <div class="blog-post">
+        <h1>{{ article.title }}</h1>
+
+        <h4>作者：王朝伟&nbsp&nbsp&nbsp&nbsp日期：{{ article.add_time }}</h4>
+
+            {% autoescape off %}
+                {{ article.text }}
+            {% endautoescape %}
+        <
+    </div>
+
+{% endblock %}

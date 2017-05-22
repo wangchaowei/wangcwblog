@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+    <br>
+    <h1 class="text-center">分类 &nbsp&nbsp<small>目前共计{{ category_num }}个分类</small></h1>
+    <br><br>
+    {% for category in categories %}
+        <a href="/category/{{ category.id }}">
+            <h3>{{ category }}&nbsp&nbsp<span class="badge">{{ category.article.count }}</span></h3>
+        </a>
+    {% endfor %}
+
+
+{% endblock %}

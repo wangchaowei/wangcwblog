@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+    <br>
+    <h1 class="text-center">标签 &nbsp&nbsp<small>目前共计{{ tags_num }}个标签</small></h1>
+    <br><br>
+    {% for tag in tags %}
+        <a href="/tag/{{ tag.id }}">
+            <h3>{{ tag }}&nbsp&nbsp<span class="badge">{{ tag.article.count }}</span></h3>
+        </a>
+    {% endfor %}
+
+
+{% endblock %}

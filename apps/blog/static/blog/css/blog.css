@@ -1,0 +1,48 @@
+h1 a {
+    color: #FCA205; /*h1 a是CSS选择器，上面的意思是在h1标签下的链接a的文字颜色会是#FCA205，其实就是橘黄色，颜色都是用十六进制表示的。*/
+    font-family: 'Lobster'; /*字体*/
+}
+
+body {
+    padding-left: 15px; /*让左边边距大一点*/
+}
+
+/*在CSS中有一个class的概念，它可以让你只改变HTML中某一部分的样式而不会影响到其他部分。*/
+.page-header {
+    background-color: #ff9400;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #ffffff;
+    font-size: 36pt;
+    text-decoration: none;
+}
+.content {
+    margin-left: 40px;
+}
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+}
+.date {
+    float: right;
+    color: #828282;
+}
+.save {
+    float: right;
+}
+.post-form textarea, .post-form input {
+    width: 100%;
+}
+.top-menu, .top-menu:hover, .top-menu:visited {
+    color: #ffffff;
+    float: right;
+    font-size: 26pt;
+    margin-right: 20px;
+}
+.post {
+    margin-bottom: 70px;
+}
+.post h1 a, .post h1 a:visited {
+    color: #000000;
+}
