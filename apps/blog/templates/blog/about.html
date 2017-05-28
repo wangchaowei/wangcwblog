@@ -1,7 +1,10 @@
 {% extends 'blog/base.html' %}
+{% load staticfiles %}
 {% block content %}
-<br>
-<h2 class="text-center">关于我</h2>
+
+    <div class="page-header">
+        <h1 class="text-center">关于我</h1>
+    </div>
     <p>刚开始做笔记和写博客是为了自己忘记东西，
         方便查找，到后来就养成了习惯。 写博客的过程中自己
         进步也越来越大，同时还能分享给其他人，予人玫瑰，手留余香。</p>
@@ -16,10 +19,10 @@
     <h4 style="font-size: 19px ">联系方式</h4>
 
     <ul>
-    <li>邮件：312805939@qq.com</li>
-    <li>QQ：312805939</li>
+    <li>邮件：<a href="mailto:312805939@qq.com">312805939@qq.com</a></li>
     <li>博客园：<a href="http://www.cnblogs.com/wangchaowei/">http://www.cnblogs.com/wangchaowei/</a></li>
+    <li>GitHub：<a href="https://github.com/wangchaowei/">https://github.com/wangchaowei/</a></li>
     </ul>
     <hr>
-
+    <img src="{% static 'blog/img/微信二维码.jpg' %}" class="img-responsive center-block " alt="微信二维码" style="max-width: 40%; height: auto; display: block" />
 {% endblock %}

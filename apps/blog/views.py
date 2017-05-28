@@ -2,6 +2,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import View, ListView
 # import markdown2
+# from urllib import urlencode
 
 from .models import Article, AuthorProfile, Comment, Category, Tag
 from pure_pagination import Paginator, EmptyPage, PageNotAnInteger
